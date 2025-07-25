@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{href-ul}
+\usepackage{minted}
+\usepackage{mathtools}
+\usepackage{marvosym}
+
+
+\setlength{\intextsep}{0pt}
+
+
+\begin{document} 
+	
+	\section*{Aufgabe 1.12}
+		Man sieht, dass die Erfolgsraten durch den Typ der Operation beeinflusst werden. Darüber hinaus beruht die Gesamterfolgsrate nur auf die Summe der Erfolgsraten, d.h. die Erfolgsquote einzelner Operationen wird hier nicht berücksichtigt. So zum Beispiel sind bestimmte Operationstypen (wie Typ 4) einfacher und somit haben Assistenzärzte bei denen eine höhere Erfolgsquote, während andere (wie Typ 1 oder Typ 2) mehr Erfahrung erfordern. 
+		\newline \\
+		Ein Kofaktor in diesem Zusammenhang ist "Operationstyp", der zu einer Verteilung der Gesamterfolgsraten führt.
+		
+	\section*{Aufgabe 1.13}
+		Im folgenden Beispiel sieht man: je kleiner der dem Kunden im letzen Jahr gewährte Rabatt, desto kleiner die Länge der Kundenbeziehung. Dieser statistische lineare Zusammenhang beschreibt die Korrelation \newline 
+		$r_{xy} \in (-1, 0)$.
+		
+	\section*{Aufgabe 1.15}
+		\begin{figure} [h]
+			\centering
+			\includegraphics[width=10cm]{/home/thienlao/screenshots/scatter.png}
+		\end{figure}
+		
+		\[y = \beta x + \alpha\]
+		
+		\[\beta = r_{xy} \frac{s_{y}}{s_{x}}=0.9503\frac{28.93}{157.76}=0.174\]
+		
+		\[\alpha=\bar{y}-\beta\bar{x}=80-0.174\cdot300=27.8\]
+		
+		\[y=0.174x + 27.8\]
+		
+		\[f(750)=0.174\cdot750 + 27.8 = 158.3\]
+		\pagebreak
+		
+		\section*{Aufgabe 1.16}
+			Eine negative Korrelation von -0.75 weist drauf hin, dass  mit zunehmendem Alter der versicherten Person die Anzahl der gemeldeten Schadensfälle pro Jahr linear abnimmt.
+			\newline \\
+			Eine positive Korrelation von +0.6 beschreibt: je älter eine Person, desto höher die Schadenshöhe.
+			
+		\section*{Aufgabe 1.17}
+			\[
+			\sum (x - \bar{x})^2 = 4.1616 + 0.4096 + 6.4516 + 1.8496 + 14.8996 = 27.772
+			\]
+			
+			\[
+			\sum (y - \bar{y})^2 = 0.8464 + 2.0164 + 8.5264 + 3.1684 + 12.1104 = 26.668
+			\]
+			
+			\[
+			s_{x}=\sqrt{\frac{27.772}{4}}\approx2.634
+			\]
+			
+			\[
+			s_{y}=\sqrt{\frac{26.668}{4}}\approx2.582
+			\]
+			
+			\[
+			r_{xy}=\frac{\sum(x_{i} - \bar{x})(y_{i} - \bar{y})}{\sqrt{\sum(x_{i} - \bar{x})^2\sum(y_{i} - \bar{y})^2}}=\frac{26.056}{\sqrt{740.193}}\approx0.957
+			\]
+\end{document}}

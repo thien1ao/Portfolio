@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{href-ul}
+\usepackage{minted}
+\usepackage{mathtools}
+\usepackage{marvosym}
+
+
+
+\setlength{\intextsep}{0pt}
+
+
+\begin{document}
+	 \section*{Aufgabe 6.12}
+	 N = 550 Gesamtzahl \\
+	 n = 25 Stichprobe \\
+	 k = 11 faule Äpfel \\
+	 \newline
+	 \[P(X = r) =  \frac{\binom{k}{r}\binom{N - k}{n-k}}{\binom{N}{n}} =  \frac{\binom{11}{2}\binom{539}{23}}{\binom{550}{25}} = 0.074\]
+	 
+	\section*{Aufgabe 6.13}
+	4 hintereinander liegende Buben bilden einen Block, der an 29 verschiedenen Positionen im Stapel auftreten kann. \\
+	\[P = \frac{29 \cdot 4! \cdot 28!}{32!} = 0.0008\]
+	
+	\section*{Aufgabe 6.14}
+	15 Shüler sollen gleichmäßig auf 3 Gruppen gleichmäßig auf 3 Gruppen: \\
+	 \[\binom{15}{5!5!5!} = 756.756\]
+	Eine Schlaukopf pro Gruppe: \\
+	\[\frac{3!\binom{12}{4 4 4}}{\binom{15}{5 5 5}} = 0.0458\]
+	drei Schlauköpfe pro Gruppe: 
+	\[\frac{3\binom{12}{2 5 5}}{\binom{15}{5 5 5}} = 0.1978\]
+	
+	\section*{Aufgabe 6.15}
+	\[P = \frac{\binom{4}{2}\binom{28}{8}\binom{20}{8}}{\binom{32}{10}\binom{32}{10}} = 0.0018\]
+	
+	\section*{Aufgabe 6.16}
+	\[P = \frac{\binom{6}{3}\frac{6!}{2!2!2!}}{6^6} = 0.23\]
+	
+	\section*{Aufgabe 6.17}
+	
+	\[P=\frac{6!}{6^7} \approx 0.015\]
+	
+\end{document}}

@@ -1,0 +1,128 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{href-ul}
+\usepackage{minted}
+\usepackage{mathtools}
+\usepackage{marvosym}
+\usepackage{textcomp}
+
+
+
+\setlength{\intextsep}{0pt}
+
+
+\begin{document}
+	\section*{Aufgabe 5.1}
+		$E(X)=15$ - durchschnittliche Lebenserwartung $\implies \lambda=\frac{1}{15}$ \\
+		\newline
+		a) $P(X \leq 10) = 1  - e^{-\frac{10}{15}} = 0.49 = 49\%$ \\
+		\newline
+		b) $P(X > 30) = e^{-\frac{30}{15}} = 0.135 = 13.5\%$ \\
+		\newline
+		c) $E(X > 30) = 15 $ \\
+	\section*{Aufgabe 5.2}
+		a) $\lambda=\frac{1}{5} \quad \mu=\frac{1}{10} \quad \tau = \lambda + \mu = \frac{3}{10}$ \\
+		\newline
+		$E(X)= \frac{1}{\tau} = 3.33$ Lebensdauer des Gesamtbauteils  \\
+		\newline
+		durchschnittliche Lebensdauer = $E(X)$ \\
+		\newline
+		b) Teilbauteile sind parallel eingeschaltet, also hängt die Lebensdauer des Gesamtessystems nicht von dem einzelnen Bauteil ab. Falls ...
+	\section*{Aufgabe 5.3}
+		a) $E(X)=3.15$ im Durchschnitt Tor/Spiel \\
+		\newline
+		$P(X > 2) = 1 - (P(0) + P(1) + P(2)) = 1 - (\frac{3.15^0}{0!}\cdot e^{-3.15} + \frac{3.15^1}{1!}\cdot e^{-3.15} + \frac{3.15^2}{2!}\cdot e^{-3.15}) = 1 - (e^{-3.15} + $ \\
+		\newline
+		$+ 3.15 \cdot e^{-3.15} + \frac{9.9225}{2}\cdot e^{-3.15}) = 1 - (0.043 + 0.135 + 0.212) = 0.61 = 61\%$ \\
+		\newline 
+		b) $\lim_{n\to\infty}$$\binom{n}{k} \cdot (\frac{\lambda}{n})^k\cdot(1 - \frac{\lambda}{n})^{n-k} = \frac{\lambda^k}{k!}\cdot e^{-\lambda} \implies P(X > 2 | n=90) = 1 - (P(0) + P(1) + P(2)) = 61\%$ \\
+		\newline
+		c) Wegen der Limes  $P(X > 2|n=5400) = P(X > 2 | n=90) = 61\%$
+		
+	\section*{Aufgabe 5.4}
+		$E(A) = 2 \quad E(B) = 1$ \\
+		\newline
+		$P(X=0)=\frac{2^0}{0!}\cdot e^{-2} = 0.135$ \\
+		\newline
+		$P(X=1)=\frac{1^1}{1!}\cdot e^{-1} = 0.37$ \\
+		\newline
+		$P(1:0) = P(X=0) \cdot P(X=1) = 0.05 = 5\% $
+	
+	\section*{Aufgabe 5.5}
+		$E(X_{i}) = \lim_{n\to\infty}\frac{1}{n}\sum_{j=1}^{n}jP(X=j) = \lim_{n\to\infty}\frac{1}{n}\sum_{j=1}^{n}j = \lim_{n\to\infty}\frac{1}{n}\sum_{j=1}^{n-k}j = \lim_{n\to\infty}\frac{n-k}{n} = ... $
+	\pagebreak
+		
+	\section*{Aufgabe 5.6}
+		$X \sim N(-3, 5)$ \\
+		\newline
+		a) $P(X \leq -8)=\Phi(\frac{-8 + 3}{5}) = \Phi(-1)=0.1587 = 15.87\%$ \\
+		\newline
+		b) $P(-3.5 \leq X \leq 3.5) = P(X \geq -3.5) - P(X \leq 3.5) =  \Phi(\frac{3.5 + 3}{5}) - \Phi(\frac{-3.5 + 3}{5}) = \Phi(1.3) - \Phi(-0.1)$ \\
+		\newline
+		$= 0.9032 - 0.4602 = 0.443 = 44.3\%$ \\
+		\newline
+		c) $P(X \geq -3) = \Phi(\frac{-3 + 3}{5}) = \Phi(0) = 0.5 = 50\%$ \\
+		\newline
+		d) $P(X \geq 22) = \Phi(\frac{22 + 3}{5}) = \Phi(5) = 0$ \\
+		\newline
+		$x_{5\%} = -3 + 5 \cdot \Phi^{-1}(0.05) = -3 + 5 \cdot (-1.64) = -11.2$  \\
+		\newline
+		$x_{99\%} = -3 + 5 \cdot \Phi^{-1}(0.99) = -3 + 5 \cdot 2.326 = 8.63$ 
+		
+	\section*{Aufgabe 5.7}
+		$X \sim N(100, 15)$ \\
+		\newline
+		a) $P(X \leq 90) = \Phi(\frac{90-100}{15}) = \Phi(-0.67) = 0.2514 = 25.14\%$ \\
+		\newline
+		b) $P(X > 110) = 1 - \Phi(\frac{110-100}{15}) = 1 - \Phi(0.67) = 1 - 0.7475 = 0.2525 = 25\%$ \\
+		\newline
+		c)  $P(X > 140) = 1 - \Phi(\frac{140-100}{15}) = 1 - \Phi(2.67) = 1 - 0.9961 = 0.0039 = 0.39\%$ \\
+		\newline
+		d) $x_{1\%} = 100 + 15 \cdot \Phi^{-1}(0.01) = 100 + 15 \cdot (-2.326) = 65.11$ \\
+		\newline
+		e)  $x_{99.8\%} = 100 + 15 \cdot \Phi^{-1}(0.998) = 100 + 15 \cdot 2.878 = 143.17$ 
+	
+	\section*{Aufgabe 5.8}
+		$X \sim N(60, 5)$ \\
+		\newline
+		a) $P(X \leq 55) = \Phi(\frac{55-60}{5}) = \Phi(-1) = 0.1587$ \\
+		\newline
+		$P(55 \leq X \leq 65) = P(X \leq 65) - P(X \geq 55) = \Phi(1) - \Phi(-1) = 0.8413 - 0.1587 = 0.6826$ \\
+		\newline
+		$P(65 \leq X \leq 70) = P(X \leq 70) - P(X \geq 65) = \Phi(2) - \Phi(1) = 0.9772 - 0.8413 = 0.1359$ \\
+		\newline
+		$P(X \geq 70) = 1 - \Phi(\frac{70-60}{5}) = 1 - \Phi(2) = 0.0228$ \\
+		\newline
+		b) $E(X) = 0.2 \cdot 0.1587 + 0.25 \cdot 0.6826 +0.3 \cdot  0.1359 + 0.35 \cdot 0.0228 = 0.2511 = 25.11$ Euro \\
+		\newline
+		c) $x_{10\%} = 60 + 5 \cdot \Phi^{-1}(0.1) = 60 + 5 \cdot -1.28 = 53.6$ \\
+		\newline
+		$x_{50\%} = 60 + 5 \cdot \Phi^{-1}(0.5) = 60 + 5 \cdot 0 = 60$ \\
+		\newline
+		$x_{90\%} = 60 + 5 \cdot \Phi^{-1}(0.9) = 60 + 5 \cdot 1.29 = 66.45 $ \\
+		\newline
+			\(
+		\begin{array}{|c|c|c|c|c|c|c|c|}
+			\hline
+			\text{Gewichtsklasse in g} & \leq53 & [53, 60] & [60, 66] & \geq 66 \\
+			\hline
+			\text{Preis in \EurCr} & 0.2 & 0.25 & 0.3 & 0.35 \\
+			\hline
+		\end{array}
+		\) \\
+		
+		\section*{Aufgabe 5.9}
+		$X \sim N(12.250, 1500)$ \\
+		\newline
+		$P(X \leq 10.000) = \Phi(\frac{10.000 - 12.250}{1500}) = \Phi(-1.5) = 0.0668 = 6.68\%$ \\ 
+		\newline
+		$P(X \geq 10.000) = 1 - \Phi(\frac{10.000 - 12.250}{1500}) = 1 - \Phi(-1.5) = 1 - 0.0668 = 0.9332$ ...
+	
+\end{document}}

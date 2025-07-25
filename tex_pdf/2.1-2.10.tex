@@ -1,0 +1,166 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{href-ul}
+\usepackage{minted}
+\usepackage{mathtools}
+\usepackage{marvosym}
+
+
+
+\setlength{\intextsep}{0pt}
+
+
+\begin{document} 
+	\section*{Aufgabe 2.1}
+	$P(A) = 0.87$ E-Mail \\ 
+	\newline
+	$P(B) = 0.83$ Facebook \\
+	\newline
+	$P(A \cap B) = 0.73$ beides \\
+	\newline
+	$P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.87 + 0.83 - 0.73 = 0.97$ \\
+	\newline
+	$P(A^c \cap B^c) = 1 - P(A \cup B) = 1 - 0.97 = 0.03$
+	
+	\section*{Aufgabe 2.2}
+	$P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.8 + 0.4 - 0.3 = 0.9$ \\
+	\newline 
+	$P\neg(A \cup B) = 1 - P(A \cup B) = 1 - 0.9 = 0.1$ \\
+	\newline
+	$P\neg(A \cap B) = 1 - P(A \cap B) = 1 - 0.3 = 0.7$ \\
+	\newline
+	$P(A^c \cap B^c) = P(A \cup B)^c = 1 - P(A \cup B) = 1 - 0.9 = 0.1  $ \\
+	\newline 
+	$P(A^c \cup B^c) = P(A \cap B)^c = 1 - P(A \cap B) = 1 - 0.3 = 0.7$
+	
+	\section*{Aufgabe 2.3}
+	\text{\large Unfairer Würfel} \\
+	\newline
+	keine 6 im ersten Wurf: \\
+	\newline
+	$P\neg(6) = 1 - P(6) = 1 - 0.2 = 0.8$ \\
+	\newline
+	keine 6 in beiden Würfen: \\
+	\newline 
+	$P\neg(6) \cdot P\neg(6) = 0.64$ \\
+	\newline 
+	mindestens eine 6: \\
+	\newline
+	$1 - P\neg(6) \cdot P\neg(6) = 0.36$ \\
+	\newline 
+	\text{\large Fairer Würfel} \\
+	\newline
+	$P(6) = \frac{1}{6} \approx 0.17 \quad P\neg(6) = 1 - P(6) = 0.83 \quad P\neg(6) \cdot P\neg(6) = 0.7 $ \\
+	\newline
+	mindestens eine 6: \\
+	\newline
+	$ 1 -P\neg(6) \cdot P\neg(6) = 1 - 0.7 = 0.3$
+	\pagebreak 
+	
+	\section*{Aufgabe 2.4}
+	\begin{figure} [h]
+		\includegraphics[width=10cm]{/home/thienlao/screenshots/table.png}
+	\end{figure}
+	\vspace{5pt}	 	
+	$E(|X-Y|) = \frac{1}{36} \sum_{i=1}^{6}\sum_{j=1}^{6}|x_{i} - y_{j}| = \frac{70}{36} = 1.94$ \\
+	
+	\begin{figure} [h]
+		\includegraphics[width=10cm]{/home/thienlao/screenshots/table_1.png}
+	\end{figure} 
+	\vspace{5pt}
+	$E(min(X,Y)) =  \frac{1}{36} \sum_{i=1}^{6}\sum_{j=1}^{6}min(x_{i},y_{j}) = \frac{91}{36} = 2.53 $ \\ 
+	
+	\begin{figure} [h]
+		\includegraphics[width=10cm]{/home/thienlao/screenshots/table_2.png}
+	\end{figure} 
+	\vspace{5pt}
+	$E(max(X,Y)) =  \frac{1}{36} \sum_{i=1}^{6}\sum_{j=1}^{6}max(x_{i},y_{j}) = \frac{161}{36} = 4.48$ 
+	
+	\section*{Aufgabe 2.5}
+	$E(X) = 2 \cdot P(6) = \frac{1}{3} \quad E(Y) = 2 \cdot P(5) = \frac{1}{3}$ \\
+	\newline
+	$E(X) \cdot E(Y) = \frac{1}{9}$ \\
+	\newline
+	$E(X \cdot Y) = P(5,6) + P(6,5) \quad P(5,6) = P(6,5) = \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36} \implies $ \\
+	\newline
+	$E(X \cdot Y) = \frac{1}{18}$
+	
+	\section*{Aufgabe 2.6}
+	1. $E(X - E(X)) =  E(X) - E(E(X)) = E(X) - E(X) = 0$ \\
+	\newline
+	2. $E((X - E(X))^2) = E(X^2) - (E(X))^2 \quad E(X^2) = \frac{1}{6}\sum x_{i}^2 = \frac{91}{6} \quad E(X) = \frac{1}{6}\sum x_{i} = \frac{7}{2} \implies $ \\
+	\newline 
+	$E((X - E(X))^2) = \frac{91}{6} - (\frac{7}{2})^2 = 2.92$ \\
+	\newline
+	3. $E((X - E(X))^3) = E(X^3) -3 \cdot E(X) \cdot E((X-E(X))^2 - (E(X))^3= \frac{147}{2} - 3 \cdot \frac{21}{6} \cdot \frac{35}{12} - (\frac{21}{6})^3=0$
+	\pagebreak
+	
+	\section*{Aufgabe 2.7}
+	$E(X) = (1 -P(\{(1, 1), (1, 2), (2, 1)\})) \cdot (-20) + P(\{(1, 1), (1, 2), (2, 1)\}) \cdot 1 = \frac{33}{36} \cdot (-20) + \frac{3}{36} \cdot 1 = -\frac{27}{36} = -0.75$ \\
+	
+	\begin{figure} [h]
+		\centering
+		\includegraphics[width=12cm]{/home/thienlao/screenshots/jack_gewinn.png}
+	\end{figure}
+	\vspace{5pt}
+	Da der Erwartungswert negativ ist, sollte Jack das Spiel aufgeben
+	
+	\section*{Aufgabe 2.8}
+	$E = P(ROT) \cdot 1 + (1 - P(ROT)) \cdot (-1) = \frac{18}{37} - \frac{19}{37} = -0.027$ \\
+	\newline
+	Simulationen: 100
+	
+	\begin{figure} [h]
+		\centering
+		\includegraphics[width=12cm]{/home/thienlao/screenshots/sim_2.png}
+	\end{figure}
+	\pagebreak
+	Simulationen: 500
+	\begin{figure} [h]
+		\centering
+		\includegraphics[width=12cm]{/home/thienlao/screenshots/sim_3.png}
+	\end{figure}
+	
+	Simulationen: 1000
+	
+	\begin{figure} [h]
+		\centering
+		\includegraphics[width=12cm]{/home/thienlao/screenshots/sim_4.png}
+	\end{figure}
+	\pagebreak
+	
+	\section*{Aufgabe 2.9}
+	Der Erwartungswert unterschiedet sich, je nachdem, ob die Person nach dem Öffnen einer Tür, bei seiner Wahl bleibt. \\
+	\newline
+	Wenn man seine Wahl nicht ändert, nutzt man quasi ledeglich die ursprüngliche Wahrscheinlichkeit ($P(\omega)=\frac{1}{3}$) das Geld zu gewinnen. Deshalb beträgt $E = 1 \cdot \frac{1}{3} + 0 \cdot (1 - \frac{1}{3}) = \frac{1}{3}$. Hierbei steht die 1 für das Geld und die 0 für die Ziege. \\
+	\newline
+	Wenn man jedoch wechselt, beträgt $E = \frac{2}{3} \cdot 1 + \frac{1}{3} \cdot 0 = \frac{2}{3}$, denn der Showmaster öffnet immer die Tür mit Ziege, d.h. die Gewinnswahrscheinlichkeit ($P(\omega) = \frac{2}{3}$). \\
+	
+	 \begin{figure} [h]
+	 	\centering
+	 	\includegraphics[width=12cm]{/home/thienlao/screenshots/anz.png}
+	 \end{figure}
+	
+	
+	
+	 
+	
+
+	
+	
+	
+	
+	
+		
+
+	
+		
+	
+\end{document}}

@@ -1,0 +1,89 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{href-ul}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document} 
+
+		
+		\section*{Aufgabe 1.7}
+		
+		\begin{center}
+			\(
+			\begin{array}{|c|c|c|c|c|c|c|}
+				\hline
+				\textbf{Mittelwert} & 0 & 31.7 & 32 & 32 & 32 & 32 \\
+				\hline
+				\textbf{Median} & 0 & 31 & 32 & 32 & 32 & 32  \\
+				\hline
+				\textbf{Standardabw} & 1 & 2.5 & 0.5 & 1 & 1.7 & 2.7 \\
+				\hline
+				\textbf{Histogramm} & 3 & 5 & 2 & 1 & 6 & 4 \\
+				\hline
+			\end{array}
+			\)
+		\end{center}
+			
+		\section*{Aufgabe 1.8}
+		\[\bar{x}_{A}=\frac{2.2+1.8+2.1+2+2.4}{5}=2.1 \quad \sigma_{A}=\sqrt{\frac{0.2}{4}} \approx 0.22\]
+		
+		\[\bar{x}_{B}=\frac{5.2-2.8-3.8+4+8.4}{5}=2.2 \quad \sigma_{B}=\sqrt{\frac{111.68}{4}} \approx 5.28\]
+		
+			
+		\section*{Aufgabe 1.9}
+		\[x_{50\%}=\frac{1000}{2}=500\]
+		
+		\[x_{25\%}=1000 \cdot 0.25=250\]
+		
+		\[x_{75\%}=1000 \cdot 0.75=750\]
+		
+		\[\bar{x}=\frac{200 \cdot 10 + 250 \cdot 20 + 200 \cdot 30 + 200 \cdot 50 + 130 \cdot 100 + 200 \cdot 20}{1000} = 40\]
+		
+		\[\sigma=\sqrt{\frac{200 \cdot(10 - 40)^2 + 250 \cdot(20-40)^2+ 200 \cdot (30 -40)^2+ 200\cdot(50-40)^2+130\cdot (100-40)^2+20\cdot(200-40)^2}{1000}}\]
+		
+		\[=\sqrt{1300}=36\]
+		
+		\section*{Aufgabe 1.10}
+		\[x_{10\%}=200\cdot0.1=20 \quad \text{liegt bei Alter 5}\] 
+		
+		\[x_{50\%}=200\cdot0.5=100 \quad \text{liegt bei Alter 8} \]
+		
+		\[x_{90\%}=200\cdot0.9=180 \quad \text{liegt bei Alter 13} \]
+		
+		\section*{Aufgabe 1.11}
+		DAX shwankt stärker an Dienstagen, weil Maximawerte dienstags größer (bzw. Minimawerte kleiner) sind als montags.
+	
+\end{document}}
